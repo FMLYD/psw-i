@@ -3,7 +3,7 @@ do
 for model in 'PSW-I'   
 do
 if [ $model = 'PSW-I' ];then
-python benchmark_sinkhornfft_val.py --lr 0.01 --batch_size 256 --dataset ETT_h2 --n_epochs 200 --seq_length 24 --distance fft --ratio $ratio --device cuda:1 --ot_type uot_mm --reg_m 1
+python benchmark.py --lr 0.01 --batch_size 256 --dataset ETT_h2 --n_epochs 200 --seq_length 24 --distance fft --ratio $ratio --device cuda:1 --ot_type uot_mm --reg_m 1
 else
 python new_pipeline.py   --model $model --ratio $ratio  --dataset ETT_h2   --dataset_fold_path data/generated_datasets/italy_air_quality_rate01_step12_point   --saving_path results_point_rate01   --device cuda:1
 fi
