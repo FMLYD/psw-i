@@ -31,14 +31,14 @@ Prepare your time-series dataset with missing values following the format in `ou
 then use
 ```bash  
 python process_data.py --dataset dataset_name
-```  
+```
 ### Running the Model  
 To run PSW-I for imputation:  
 ```bash  
 sh scripts/etth1.sh
-```  
+```
 
 
 
 
-# psw-i
+# 
