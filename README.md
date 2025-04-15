@@ -10,13 +10,22 @@
 
 This repository contains the implementation of **PSW-I**, a novel framework for robust and effective imputation of missing values in time-series data. The approach is built upon the **Proximal Spectrum Wasserstein (PSW)** discrepancy, tailored to address key challenges in time-series imputation.  
 
-
 ## Usage
+
+First, you can process your data using `process_data.py` in `./our_data`:
+
+```bash
+python our_data/process_data.py
+```
+Then, you can run the script:
+
 ```
 bash scripts/illness.sh
 ```
-
-
+Or use benchmark.py, for example:
+```
+python benchmark.py --lr 0.01 --batch_size 256 --dataset ETTh1 --n_epochs 200 --seq_length 24 --distance fft --ratio 0.1 --mva_kernel 9
+```
 ## Abstract  
 Missing data imputation through distribution alignment has demonstrated advantages for non-temporal datasets but exhibits suboptimal performance in time-series applications. The primary obstacle is crafting a discrepancy measure that simultaneously:  
 1. Captures **temporal patterns**—accounting for periodicities and temporal dependencies inherent in time-series.  
